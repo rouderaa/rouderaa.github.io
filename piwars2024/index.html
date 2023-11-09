@@ -58,9 +58,15 @@ indeed they are.</p>
 </div>
 
 <div class="blog-entry">
+<h2>The team</h2>
+<p>
+The robopi team consists of two robot enthusiasts, Kees and Rob. Both are members of the Dutch Hobby Computer Club Robotica. Which is Dutch for the robotics group.
+There is a monthly gathering of this robotics group right in the centre of the Netherlands in the city of Amersfoort. This a nice time to meet others and exchange stories and the current challenges that we always face when there is something to do with robotics. Never a dull moment.
+</p></div>
+<div class="blog-entry">
 <h2>Choices, choices, choices</h2>
 
-<p>Well what is this cart going to look like? It depends on what
+<p>So well what is this cart going to look like? It depends on what
 it should be able to do. So reading the website of PiWars was the place
 to start. After reading and pondering it looks like that speed is
 important and image recognition. We want to see different kinds of
@@ -195,11 +201,10 @@ bolts.</p>
 Measured again, twice, now should be good.
 </p>
 
-<img style="height: 429px; width: 535px;" src="./images/IMG_0181.JPG" alt="Canon base attempt 2" />
+<img src="./images/IMG_0181.JPG" alt="Canon base attempt 2" />
 <p>Now in red and even seems to fit on the chassis, life is good.
 Changed the way the poles are attached to the main frame with a bolt
 and screw attach.</p>
-
 </div>
 
 <div class="blog-entry">
@@ -232,7 +237,55 @@ Probably needs some super glue but it is ok for now.
 
 </div>
 
+<div class="blog-entry">
+<h2>Balloons, balloons ...</h2>
+
+<p>At pi-noon all robots gather around to burst balloons. To practice this art it would be nice if our robot could have a platform to attach the balloons to.
+Some looking around on the piwars website revealed a svg file with the current design using a laser cutter. Unfortunately I do not have this nice apparatus 
+but I do have a 3D printer. Some designing in freecad later led to this contraption.
+</p>
+<img style="height: 429px; width: 535px;" src="./images/IMG_0208.JPG" alt="Balloon platform" />
+<p>
+The design is free to use for all at <a href="https://www.thingiverse.com/thing:6277677">piwars balloon platform</a> .
+</p>
 </div>
+
+<div class="blog-entry">
+<h2>Driving like an egyptian</h2>
+
+<p>To start our little robot moving in some sort of controllable way the first task is to make sure it can drive in a straight line.
+Since the motors of the robot are not exactly equal there will be some tendency to drive to the left or right.
+To fix this we can use the gyroscope implemented by the bno055 chip on the robot. This thing knows the angle it is at and if we make sure that we use the steering correctly we can strive to stay on a specific angle. If the chip says we are to the left then the steering needs to go to the right and the other way around as well.
+Let the experiments begin to see if this theory conforms to the reality. 
+</p>
+<img style="height: 512px; width: 512px;" src="./images/robotsInLine.png" alt="Robots in line" />
+<p>
+This is challenging, we also need to take into account that if driving backwards the angles need to reverse. Also setting the north position is non trivial.
+The gyroscope is set to its initial 'north' at powerup. What we need to do is set a new 'north' if the robopi robot is on the floor and at the start of the track.
+In the end this comes down to doing some trigonometry with substracting one angle being the gyroscope 'north' from the angle of the 'north' required on the track.
+Now we need to test, test and test again.
+</p>
+<img style="height: 512px; width: 512px;" src="./images/Yaw_Axis_Corrected.png" alt="Robots in line" />
+</div>
+<div class="blog-entry">
+<h2>Attaching stuff</h2>
+<p>At the front of our little robot we need to be able to attach stuff. Stuff like the jousting pin to burst balloons or a grabber arm that can grab a barrel in the field. In order to allow for some sturdy but flexible attachment, Kees designed a nice holder in a wood prototype. 
+</p>
+<img style="height: 512px; width: 512px;" src="./images/woodenProtoWithInsert.jpg" alt="Wood prototype attachment" />
+<p>Then came the first 3D version. You always need at least two version to get it right. This time the first version did not print very easyly. The supports would not come off so I designed a second version that dit not need supports.
+<p>
+<img style="height: 512px; width: 512px;" src="./images/3dInsertFirst.jpg" alt="First 3d printed prototype attachment" />
+<img style="height: 512px; width: 512px;" src="./images/3dInsertSecond.jpg" alt="Second 3d printed prototype attachment" />
+<p>
+This resulted in the final version that got mounted to our little robot like this.
+</p>
+<img style="height: 512px; width: 512px;" src="./images/insertMounted.jpg" alt="Second 3d printed prototype attachment" />
+<p>
+This attachement also gives a bit of tough image to our robo, cool stuff.
+</p>
+</div>
+
+<p>V1.0 (c) Rob vd Ouderaa</p>
 
 </body>
 </html>
