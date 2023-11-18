@@ -60,8 +60,8 @@ indeed they are.</p>
 <div class="blog-entry">
 <h2>The team</h2>
 <p>
-The robopi team consists of two robot enthusiasts, Kees and Rob. Both are members of the Dutch Hobby Computer Club Robotica. Which is Dutch for the robotics group.
-There is a monthly gathering of this robotics group right in the centre of the Netherlands in the city of Amersfoort. This a nice time to meet others and exchange stories and the current challenges that we always face when there is something to do with robotics. Never a dull moment.
+The robopi team consists of two robot enthusiasts, Kees and Rob. Both are members of the 'HCC robotica' hobby club, which is Dutch for the robotics group.
+There is a monthly gathering of this robotics group right in the centre of the Netherlands in the city of Amersfoort of people fascinated with building their own robots. This a nice time to meet others and exchange stories and the current challenges that we always face when there is something to do with robotics. Never a dull moment.
 </p></div>
 <div class="blog-entry">
 <h2>Choices, choices, choices</h2>
@@ -284,8 +284,16 @@ This resulted in the final version that got mounted to our little robot like thi
 This attachement also gives a bit of tough image to our robo, cool stuff.
 </p>
 </div>
+<div class="blog-entry">
+<h2>Power glitches are not nice</h2>
+<p>Strange things were happening during testing. At random times the Arduino Uno that controls the servos suddenly stopped its program and halted.
+After a lot of scratching of the sparsely populated head, I started some measurements on the power voltage of the Arduino Uno.
+Turns out at some points when the steering servo was turning glitches on the power voltage dropped nearly 0.8 volts. Not good !
+What I then did was to add an additional dc to dc converter that just feeds the steering servo. After some more testing that solved the issue. Happy days.
+</p>
+</div>
 
-<p>V1.0 (c) Rob vd Ouderaa</p>
+<p>V1.0 (c) Rob vd Ouderaa (rouderaa@hccnet.nl)</p>
 
 </body>
 </html>
