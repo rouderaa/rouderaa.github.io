@@ -342,6 +342,13 @@ After all at disaster time moving as many barrels as possible is a good thing. S
 <img style="height: 348px; width: 512px;" src="./images/robopiPusher.jpg" alt="Mat black painted test board" />
 </div>
 
+<div class="blog-entry">
+<h2>Gamepad blues</h2>
+<p>Suddenly the gamepad that I was using as a remote stopped working. The wireless gamepad can not connect to the usb receiver in the usb port of the rpi4, fast blinking lights and all. I ordered a new one from the far east but in the mean time I need to crack on. After some thought I created a small telnet server on the rpi4 that makes each received character into a ros2 message. In this way I can send a start and stop key command to the telnet server using putty. So pressing the 's' key on the putty terminal results in starting the robot and pressing the space bar stops.
+</p>
+<img style="height: 348px; width: 512px;" src="./images/gamepad2.png" alt="Gamepad blues" />
+</div>
+
 <p>V1.0 (c) Rob vd Ouderaa (rouderaa@hccnet.nl)</p>
 
 </body>
